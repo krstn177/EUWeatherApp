@@ -1,0 +1,201 @@
+body, html{
+    height: 100%;
+}
+body{
+    margin: 0px;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+.bg-image{
+  background-image: url(../images/CapitalPhotos/paris.jpg);
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-image 1s, opacity 1s;
+}
+.searchContainer{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -15%);
+    z-index: 2;
+    transition: width 1s;
+}
+.searchBar{
+    width: 80%;
+    height: 70px;
+    border-radius: 50px;
+    /* background-color: rgba(22, 138, 41, 0.55); */
+    /* background: linear-gradient(135deg, rgba(27, 84, 243, 0.55), rgba(77, 77, 77, 0.55)); */
+    background-color: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: none;
+    outline: none;
+    padding: 10px 25px;
+    font-size: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: background-color 0.5s, box-shadow 0.5s;
+}
+.searchBar:focus{
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 15px;
+
+}
+#searchBtn{
+    width: 70px;
+    height: 70px;
+    border: none;
+    outline: none;
+    padding: 20px;
+    border-radius: 50%;
+    /* background-color: rgba(22, 138, 41, 0.55); */
+    /* background: linear-gradient(135deg, rgba(27, 84, 243, 0.55), rgba(77, 77, 77, 0.55)); */
+    background-color: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.5s, box-shadow 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#searchBtn:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 15px;
+}
+#searchBtn:disabled{
+    cursor: default;
+    background-color: rgba(68, 68, 68, 1);
+}
+.searchIcon{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.weatherContainer{
+    width: 500px;
+    padding: 20px;
+    border-radius: 50px;
+    background: linear-gradient(180deg, rgba(27, 84, 243, 0.55), rgba(77, 77, 77, 0.55));
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 15px;
+    opacity: 1;
+    visibility: visible;
+    transition: width 0.5s, opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+.mainWeatherIconContainer{
+    margin: 0px auto;
+    width: 50%;
+}
+.mainWeatherIcon{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.temperature{
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    margin: 5px 0;
+}
+.city{
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    margin: 5px 0;
+}
+.pagesBtn{
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: black;
+    font-size: 1.35rem;
+    font-weight: 600;
+    transition: background-color 0.5s, box-shadow 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.pagesBtn:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 15px;
+}
+.pagesBtn:disabled{
+    cursor: default;
+    background-color: rgba(68, 68, 68, 1);
+}
+.btnsContainer{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    position: absolute;
+    padding: 10px;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -85%);
+}
+.detailsContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+.details{
+    width: 45%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.detailsImageContainer{
+    width: 30%;
+}
+.detailsImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.detailsDesc{
+    color: white;
+    font-size: 1.4rem;
+}
+@media(max-width: 520px){
+    .weatherContainer, .searchContainer {
+        width: 90%;
+    }
+    .searchBar{
+        width: 70%;
+    }
+}
+@media(max-width: 400px){
+    .detailsContainer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .details{
+        width: 90%;
+    }
+}

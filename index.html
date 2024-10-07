@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EU Weather</title>
+    <link rel="stylesheet" href="./styles/Main.css">
+    <script src="https://kit.fontawesome.com/c07e681897.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="bgImage" class="bg-image"></div>
+    <div id="searchContainer" class="searchContainer">
+        <input type="text" placeholder="Enter city name:" id="searchBar" class="searchBar"></input>
+        <button id="searchBtn"><img class="searchIcon" src="./images/Weather Icons/search.png" alt="search"></button>
+    </div>
+    <div class="weatherContainer">
+        <div class="mainWeatherIconContainer">
+            <img src="./images/Weather Icons/rain.png" alt="weather-icon" class="mainWeatherIcon">
+        </div>
+        <h1 class="temperature">22°C</h1>
+        <h2 class="city">Paris</h2>
+        <div class="detailsContainer">
+            <div class="details">
+                <div class="detailsImageContainer">
+                    <img src="./images/Weather Icons/humidity.png" alt="humidity" class="detailsImg">
+                </div>
+                <p class="detailsDesc">50% <br/>humidity</p>
+            </div>
+            <div class="details">
+                <div class="detailsImageContainer">
+                    <img src="./images/Weather Icons/wind.png" alt="wind" class="detailsImg">
+                </div>
+                <p class="detailsDesc">20km/h <br/>wind speed</p>
+            </div>
+        </div>
+    </div>
+    <div class="btnsContainer">
+        <button id="previous" class="pagesBtn"><i class="fa-solid fa-circle-arrow-left arrowIcon"></i></button>
+        <button id="next" class="pagesBtn"><i class="fa-solid fa-circle-arrow-right arrowIcon"></i></button>
+    </div>
+    <script type="module" src="./scripts/Main.js"></script>
+</body>
+</html>
