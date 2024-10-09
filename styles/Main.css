@@ -10,14 +10,14 @@ body{
     box-sizing: border-box;
 }
 .bg-image{
-  background-image: url(../images/CapitalPhotos/paris.jpg);
-  filter: blur(2px);
-  -webkit-filter: blur(2px);
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: background-image 1s, opacity 1s;
+    background-image: url(../images/CapitalPhotos/paris.jpg);
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-image 1s, opacity 1s;
 }
 #mainContainer{
     max-height: 95vh;
@@ -156,7 +156,7 @@ body{
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin: 20px 0;
+    margin-top: 20px;
 }
 .details{
     width: 45%;
@@ -183,6 +183,12 @@ body{
     }
     .searchBar{
         width: 70%;
+        height: 50px;
+    }
+    #searchBtn{
+        width: 50px;
+        height: 50px;
+        padding: 10px;
     }
 }
 @media(max-width: 400px){
@@ -191,7 +197,13 @@ body{
         justify-content: center;
         align-items: center;
     }
+    .detailsImageContainer{
+        height: 100%;
+        width: 20%;
+    }
     .details{
         width: 90%;
+        max-height: 50px;
+        justify-content: space-around;
     }
 }
