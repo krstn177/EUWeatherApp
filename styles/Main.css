@@ -19,16 +19,21 @@ body{
   background-size: cover;
   transition: background-image 1s, opacity 1s;
 }
-.searchContainer{
+#mainContainer{
+    max-height: 95vh;
     width: 500px;
-    display: flex;
-    justify-content: space-between;
     position: absolute;
-    top: 15%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -15%);
+    transform: translate(-50%, -50%);
     z-index: 2;
     transition: width 1s;
+}
+.searchContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 .searchBar{
     width: 80%;
@@ -49,7 +54,6 @@ body{
 .searchBar:focus{
     background-color: rgba(255, 255, 255, 0.95);
     box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 15px;
-
 }
 #searchBtn{
     width: 70px;
@@ -84,21 +88,17 @@ body{
     object-fit: contain;
 }
 .weatherContainer{
-    width: 500px;
+    width: 100%;
     padding: 20px;
     border-radius: 50px;
     background: linear-gradient(180deg, rgba(27, 84, 243, 0.55), rgba(77, 77, 77, 0.55));
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
     box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 15px;
     opacity: 1;
     visibility: visible;
     transition: width 0.5s, opacity 1s ease-in-out, visibility 1s ease-in-out;
+    margin-bottom: 20px;
 }
 .mainWeatherIconContainer{
     margin: 0px auto;
@@ -149,11 +149,7 @@ body{
     display: flex;
     justify-content: center;
     gap: 1rem;
-    position: absolute;
     padding: 10px;
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, -85%);
 }
 .detailsContainer{
     width: 100%;
@@ -182,7 +178,7 @@ body{
     font-size: 1.4rem;
 }
 @media(max-width: 520px){
-    .weatherContainer, .searchContainer {
+    #mainContainer{
         width: 90%;
     }
     .searchBar{
