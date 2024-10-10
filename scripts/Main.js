@@ -13,7 +13,7 @@ const bgImage = document.getElementById("bgImage");
 const previousBtn = document.getElementById("previous");
 const nextBtn = document.getElementById("next");
 const searchBtn = document.getElementById("searchBtn");
-const weatherContainer = document.querySelector(".weatherContainer");
+const weatherContainer = document.getElementById("weatherContainer");
 
 //Adding event listeners to the buttons
 searchBtn.addEventListener("click", searchBtnHandler);
@@ -70,10 +70,10 @@ async function searchBtnHandler(){
 //The main function that makes an API call and updates the visual elements
 async function checkWeather(city) {
     //Declare all elements that show the weather stats
-    const temperatureText = document.querySelector('.temperature');
-    const cityText = document.querySelector('.city');
-    const detailsContainer = document.querySelector('.detailsContainer');
-    const mainWeatherIcon = document.querySelector('.mainWeatherIcon');
+    const temperatureText = document.getElementById('temperature');
+    const cityText = document.getElementById('city');
+    const detailsContainer = document.getElementById('detailsContainer');
+    const mainWeatherIcon = document.getElementById('mainWeatherIcon');
     
     try{
         //Check if the city is in the european capitals list
@@ -135,7 +135,7 @@ async function checkWeather(city) {
         //Hiding all the stat elements and changing the background to red gradient on error
         bgImage.style.backgroundImage = 'none';
         weatherContainer.style.background = 'linear-gradient(180deg, rgba(138, 21, 21, 0.55), rgba(77, 77, 77, 0.55))';
-        temperatureText.textContent = `NOT FOUND`;
+        temperatureText.textContent = `"${city}" NOT FOUND`;
         cityText.style.visibility = 'hidden';
         detailsContainer.style.visibility = 'hidden';
         mainWeatherIcon.style.visibility = 'hidden';

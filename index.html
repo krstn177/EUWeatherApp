@@ -8,19 +8,19 @@
     <script src="https://kit.fontawesome.com/c07e681897.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="bgImage" class="bg-image"></div>
+    <div id="bgImage"></div>
     <div id="mainContainer">
-        <div id="searchContainer" class="searchContainer">
-            <input type="text" placeholder="Enter city name:" id="searchBar" class="searchBar"></input>
+        <div id="searchContainer">
+            <input type="text" placeholder="Enter city name:" id="searchBar"></input>
             <button id="searchBtn"><img class="searchIcon" src="./images/Weather Icons/search.png" alt="search"></button>
         </div>
-        <div class="weatherContainer">
-            <div class="mainWeatherIconContainer">
-                <img src="./images/Weather Icons/rain.png" alt="weather-icon" class="mainWeatherIcon">
+        <div id="weatherContainer">
+            <div id="mainWeatherIconContainer">
+                <img src="./images/Weather Icons/rain.png" alt="weather-icon" id="mainWeatherIcon">
             </div>
-            <h1 class="temperature">22°C</h1>
-            <h2 class="city">Paris</h2>
-            <div class="detailsContainer">
+            <h1 id="temperature">22°C</h1>
+            <h2 id="city">Paris</h2>
+            <div id="detailsContainer">
                 <div class="details">
                     <div class="detailsImageContainer">
                         <img src="./images/Weather Icons/humidity.png" alt="humidity" class="detailsImg">
@@ -35,7 +35,7 @@
                 </div>
             </div>
         </div>
-        <div class="btnsContainer">
+        <div id="btnsContainer">
             <button id="previous" class="pagesBtn"><i class="fa-solid fa-circle-arrow-left arrowIcon"></i></button>
             <button id="next" class="pagesBtn"><i class="fa-solid fa-circle-arrow-right arrowIcon"></i></button>
         </div>
